@@ -12,11 +12,6 @@
         android:title="@string/profile" />
 
     <item
-        android:id="@+id/menuFragment"
-        android:icon="@drawable/ic_menu"
-        android:title="@string/menu" />
-
-    <item
         android:id="@+id/timetableFragment"
         android:icon="@drawable/ic_timetable"
         android:title="@string/timetable" />
