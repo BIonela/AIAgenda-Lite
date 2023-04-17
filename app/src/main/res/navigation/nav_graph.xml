@@ -87,11 +87,6 @@
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/menuFragment"
-        android:name="com.example.aiagenda.ui.MenuFragment"
-        android:label="MenuFragment"
-        tools:layout="@layout/fragment_menu" />
-    <fragment
         android:id="@+id/timetableFragment"
         android:name="com.example.aiagenda.ui.TimetableFragment"
         android:label="TimetableFragment"
