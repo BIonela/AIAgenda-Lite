@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TimetableFragment">
+
+        <TextView
+            android:id="@+id/tvGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/roboto_medium_font"
+            android:text="@string/group"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:popupBackground="@color/gray_lighter"
+            app:layout_constraintBottom_toBottomOf="@id/tvGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvGroup"
+            app:layout_constraintTop_toTopOf="@id/tvGroup"
+            app:layout_constraintWidth_percent=".7" />
+
+        <com.otaliastudios.zoom.ZoomLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:scrollbars="vertical|horizontal"
+            app:alignment="center"
+            app:animationDuration="280"
+            app:flingEnabled="true"
+            app:hasClickableChildren="false"
+            app:horizontalPanEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCourses"
+            app:maxZoom="2.5"
+            app:maxZoomType="zoom"
+            app:minZoom="1"
+            app:minZoomType="zoom"
+            app:oneFingerScrollEnabled="true"
+            app:overPinchable="true"
+            app:overScrollHorizontal="true"
+            app:overScrollVertical="true"
+            app:scrollEnabled="true"
+            app:threeFingersScrollEnabled="true"
+            app:transformation="centerInside"
+            app:transformationGravity="auto"
+            app:twoFingersScrollEnabled="true"
+            app:verticalPanEnabled="true"
+            app:zoomEnabled="true">
+
+            <com.islandparadise14.mintable.MinTimeTableView
+                android:id="@+id/timetable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:isFullWidth="true"
+                app:menuColor="@color/white"
+                app:widthPadding="15" />
+
+        </com.otaliastudios.zoom.ZoomLayout>
+
+        <TextView
+            android:id="@+id/tvCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/roboto_medium_font"
+            android:text="@string/courses"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvGroup"
+            app:layout_constraintTop_toBottomOf="@id/tvGroup" />
+
+        <View
+            android:id="@+id/viewCourses"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:background="#FDA950"
+            app:layout_constraintBottom_toBottomOf="@id/tvCourses"
+            app:layout_constraintStart_toEndOf="@id/tvCourses"
+            app:layout_constraintTop_toTopOf="@id/tvCourses" />
+
+        <TextView
+            android:id="@+id/tvLabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_medium_font"
+            android:text="Laborator/Seminar: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvCourses"
+            app:layout_constraintEnd_toStartOf="@id/viewLabs"
+            app:layout_constraintTop_toTopOf="@id/tvCourses" />
+
+        <View
+            android:id="@+id/viewLabs"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabs"
+            app:layout_constraintEnd_toEndOf="@id/spGroup"
+            app:layout_constraintTop_toTopOf="@id/tvLabs" />
+
+        <include
+            android:id="@+id/pbLoading"
+            layout="@layout/loading_animation"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

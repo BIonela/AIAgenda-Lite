@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.aiagenda.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.aiagenda.ui.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFragment"
+        android:name="com.example.aiagenda.ui.DialogFragment"
+        android:label="DialogFragment"
+        tools:layout="@layout/fragment_dialog">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="toLogin"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_dialogFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <argument
+            android:name="exitApp"
+            app:argType="boolean" />
+    </dialog>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.aiagenda.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createTaskFragment"
+            app:destination="@id/createTaskFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.aiagenda.ui.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.aiagenda.ui.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.aiagenda.ui.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.aiagenda.ui.TimetableFragment"
+        android:label="TimetableFragment"
+        tools:layout="@layout/fragment_timetable">
+        <action
+            android:id="@+id/action_timetableFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.example.aiagenda.ui.TaskDetailsFragment"
+        android:label="TaskDetailsFragment"
+        tools:layout="@layout/fragment_task_details">
+        <argument
+            android:name="task"
+            app:argType="com.example.aiagenda.model.Task" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.example.aiagenda.ui.CreateTaskFragment"
+        android:label="CreateTaskFragment"
+        tools:layout="@layout/fragment_create_task" >
+        <action
+            android:id="@+id/action_createTaskFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+</navigation>

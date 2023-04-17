@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10270540877",
+    "project_id": "aiagenda-lite-59dc6",
+    "storage_bucket": "aiagenda-lite-59dc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10270540877:android:1fe8ee869f125443c20804",
+        "android_client_info": {
+          "package_name": "com.example.aiagenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10270540877-u93pluh3j9hncg6l7s7m9g7q4ejohb2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrVylws_HzDh8caCwA_f4x6QWJs0POTek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10270540877-u93pluh3j9hncg6l7s7m9g7q4ejohb2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

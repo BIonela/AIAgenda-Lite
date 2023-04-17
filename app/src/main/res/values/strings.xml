@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">AIAgenda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_label">Email</string>
+    <string name="login">Autentificare</string>
+    <string name="login_image_content_description">Image of a student and a to do list.</string>
+    <string name="password">Parola</string>
+    <string name="forgot_password">Ai uitat parola?</string>
+    <string name="keep_me_logged_in">Pastreaza-ma logat</string>
+    <!--    &#160; -> white space-->
+    <string name="no_account">Nu ai cont?&#160;</string>
+    <string name="sign_up">Inregistreaza-te</string>
+    <string name="sign_up_title">Inregistrare</string>
+    <string name="last_name_label">Nume</string>
+    <string name="first_name_label">Prenume</string>
+    <string name="study_year_label">An de studiu:</string>
+    <string name="select_year">Selectati anul</string>
+    <string name="ok">OK</string>
+    <string name="email_used">Adresa de e-mail are deja un cont asociat.</string>
+    <string name="no_internet">Nu s-a putut realiza conexiunea la internet.</string>
+    <string name="signup_success">Inregistrare efectuata cu succes.</string>
+    <string name="empty_field">Completati campul!</string>
+    <string name="email_not_valid">Nu ati introdus adresa institutionala UTCB!</string>
+    <string name="password_short">Parola trebuie sa contina minim 6 caractere!</string>
+    <string name="email_not_found">Nu exista niciun cont asociat adresei de mail.</string>
+    <string name="wrong_password">Parola nu este corecta sau adresa de e-mail este invalida (Verificati spatiile albe).</string>
+    <string name="recover_password">Recuperare parola</string>
+    <string name="email_invalid">Adresa de e-mail este invalida. Verificati spatiile albe.</string>
+    <string name="recover_password_text">Introduceti adresa de e-mail pentru a va trimite un mesaj cu instructiunile de recuperare a parolei</string>
+    <string name="send_email">Trimite</string>
+    <string name="send_reset_password_email">Un mesaj a fost trimis la adresa de mail introdusa.</string>
+    <string name="navigating_back_description">Sageata pentru a naviga inapoi.</string>
+    <string name="too_many_requests">Accesul la acest cont a fost dezactivat temporar din cauza multor încercări eșuate de conectare.</string>
+    <string name="another_exception">A aparut o eroare. Va rugam incercati mai tarziu.</string>
+    <string name="reconnect_error">A aparut o eroare. Va rugam sa va reconectati.</string>
+    <string name="permission_deny">Pentru a actualiza poza de profil este necesara acceptarea permisiunii (Setari/Aplicatii/AIAgenda/Permisiuni).</string>
+
+    //Menu Strings
+    <string name="home">Acasa</string>
+    <string name="profile">Profil</string>
+    <string name="menu">Meniu</string>
+    <string name="timetable">Orar</string>
+
+    <string name="student_study_year">Student, An %s</string>
+    <string name="full_name">%s %s</string>
+    <string name="no_internet_text">Nu s-a putut realiza conexiunea la internet.</string>
+    <string name="personal_data">Date personale:</string>
+    <string name="change_picture_description">Imagine pentru modificarea fotografiei de profil.</string>
+    <string name="logout_description">Imagine pentru delogare.</string>
+    <string name="last_name">Nume: %s</string>
+    <string name="first_name">Prenume: %s</string>
+    <string name="email">Email: %s</string>
+    <string name="study_year">An de studiu: %s</string>
+    <string name="change_profile_picture">Modificare poza de profil:</string>
+    <string name="sign_out">Delogare:</string>
+    <string name="group">Grupa:</string>
+    <string name="courses">Cursuri:</string>
+    <string name="add_task_description">Adauga o tema noua.</string>
+    <string name="add_task">Adaugare Tema</string>
+    <string name="title">Titlu</string>
+    <string name="task_title_hint">Titlul temei</string>
+    <string name="class_name">Materia</string>
+    <string name="class_name_hint">Denumirea materiei</string>
+    <string name="start_date_hint">Data de inceput ZZ/MM/AAAA</string>
+    <string name="start_date">Data de inceput</string>
+    <string name="end_date">Data de predat</string>
+    <string name="end_date_hint">Data de predare ZZ/MM/AAAA</string>
+    <string name="task_photo_description">Fotografia corespunzatoare temei</string>
+    <string name="add_photo">Incarcare Poza</string>
+    <string name="no_tasks_description">Image for empty list of tasks.</string>
+    <string name="no_tasks">Nicio sarcina adaugata...</string>
+    <string name="iv_calendar_description">Deschidere calendar pentru alegerea datei.</string>
+    <string name="description">Descriere/Observatii</string>
+    <string name="description_hint">Descriere/Observatii privind tema creata</string>
+    <string name="delete_task_description">Delete a task</string>
+    <string name="to_do">De facut:</string>
+    <string name="task_percent">%s\%%</string>
+
+    <string-array name="an_studiu">
+        <item>Nicio selectie</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="grupa">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="colors">
+        <item>#2F75FD</item>
+        <item>#E02FFD</item>
+        <item>#F70C0C</item>
+        <item>#42FF00</item>
+        <item>#00C2FF</item>
+        <item>#FF0099</item>
+        <item>#757890</item>
+    </string-array>
+
+</resources>

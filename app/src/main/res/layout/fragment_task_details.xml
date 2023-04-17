@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TaskDetailsFragment">
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/gray_lighter"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular_font"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:drawableLeftCompat="@drawable/ic_title"
+            app:layout_constraintEnd_toStartOf="@id/pbTask"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdfsadsdafseefffefasdf" />
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/gray_lighter"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular_font"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:drawableLeftCompat="@drawable/ic_class"
+            app:layout_constraintEnd_toStartOf="@id/pbTask"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTaskTitle"
+            tools:text="Tehnici de securizare a datelor" />
+
+        <ProgressBar
+            android:id="@+id/pbTask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/tvCourseName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTaskTitle"
+            app:layout_constraintTop_toTopOf="@id/tvTaskTitle"
+            app:layout_constraintWidth_percent="0.3"
+            tools:progress="75" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_font"
+            app:layout_constraintBottom_toBottomOf="@id/pbTask"
+            app:layout_constraintEnd_toEndOf="@id/pbTask"
+            app:layout_constraintStart_toStartOf="@id/pbTask"
+            app:layout_constraintTop_toTopOf="@id/pbTask"
+            tools:text="20%" />
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/gray_lighter"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:drawableLeftCompat="@drawable/ic_start_date"
+            app:layout_constraintEnd_toStartOf="@id/tvEndDate"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pbTask"
+            tools:text="20/03/2023" />
+
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/gray_lighter"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:drawableLeftCompat="@drawable/ic_end_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/tvStartDate"
+            app:layout_constraintTop_toBottomOf="@id/pbTask"
+            tools:text="20/03/2023" />
+
+        <TextView
+            android:id="@+id/tvDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/description"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/tvStartDate"
+            app:layout_constraintTop_toBottomOf="@id/tvStartDate" />
+
+        <TextView
+            android:id="@+id/tvDescriptionContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/gray_lighter"
+            android:fontFamily="@font/roboto_regular_font"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvDescriptionTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionTitle"
+            tools:text="ADFfdfasdfasdgggggggggggggggggggggggggggggggga" />
+
+        <ImageView
+            android:id="@+id/ivTaskPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/task_photo_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionContent"
+            tools:src="@drawable/no_task" />
+
+        <include
+            android:id="@+id/layoutFullImage"
+            layout="@layout/full_image"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

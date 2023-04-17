@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.aiagenda.viewmodel.CreateTaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:context=".ui.CreateTaskFragment">
+
+        <ImageView
+            android:id="@+id/ivArrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/navigating_back_description"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/add_task"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivArrowBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivArrowBack" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/title"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddTask" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:afterTextChanged="@{viewModel::setTaskTitle}"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_medium_font"
+            android:hint="@string/task_title_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvClassName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/class_name"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+        <EditText
+            android:id="@+id/etClass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:afterTextChanged="@{viewModel::setClassName}"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_medium_font"
+            android:hint="@string/class_name_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvClassName" />
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/start_date"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etClass" />
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:afterTextChanged="@{viewModel::setStartTime}"
+            android:background="@drawable/edit_text_background"
+            android:enabled="true"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_medium_font"
+            android:hint="@string/start_date_hint"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStartDate" />
+
+        <ImageView
+            android:id="@+id/ivStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/iv_calendar_description"
+            android:paddingHorizontal="15dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintBottom_toBottomOf="@id/etStartDate"
+            app:layout_constraintEnd_toEndOf="@id/etStartDate"
+            app:layout_constraintTop_toTopOf="@id/etStartDate"
+            app:tint="@color/gray_medium" />
+
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/end_date"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etStartDate" />
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:afterTextChanged="@{viewModel::setEndTime}"
+            android:background="@drawable/edit_text_background"
+            android:enabled="true"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_medium_font"
+            android:hint="@string/end_date_hint"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEndDate" />
+
+        <ImageView
+            android:id="@+id/ivEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/iv_calendar_description"
+            android:paddingHorizontal="15dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintBottom_toBottomOf="@id/etEndDate"
+            app:layout_constraintEnd_toEndOf="@id/etEndDate"
+            app:layout_constraintTop_toTopOf="@id/etEndDate"
+            app:tint="@color/gray_medium" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular_font"
+            android:text="@string/description"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEndDate" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:afterTextChanged="@{viewModel::setDescription}"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/roboto_medium_font"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <ImageView
+            android:id="@+id/ivTaskPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/task_photo_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/btnCreateTask"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDescription"
+            app:layout_constraintVertical_bias="0.55"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <Button
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/roboto_bold_font"
+            android:text="@string/add_photo"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivTaskPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivTaskPhoto"
+            app:layout_constraintTop_toTopOf="@id/ivTaskPhoto" />
+
+        <Button
+            android:id="@+id/btnCreateTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:enabled="@{viewModel.isEnabled}"
+            android:fontFamily="@font/roboto_bold_font"
+            android:text="@string/add_task"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/pbLoading"
+            layout="@layout/loading_animation"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
