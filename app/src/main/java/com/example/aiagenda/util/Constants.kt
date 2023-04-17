@@ -3,6 +3,7 @@ package com.example.aiagenda.util
 object FireStoreCollection {
     const val USER = "user"
     const val TIMETABLE = "timetable"
+    const val TIMETABLE_TIME = "timeData"
 }
 
 object SharedPrefConstants {

@@ -35,7 +35,7 @@ class TimetableRepository(
         uiState: (UiStatus) -> Unit
     ) {
         val docRef =
-            database.collection(FireStoreCollection.TIMETABLE)
+            database.collection(FireStoreCollection.TIMETABLE_TIME)
         docRef.get()
             .addOnSuccessListener { document ->
                 val timeTimetable = mutableMapOf<String, TimetableTime>()
